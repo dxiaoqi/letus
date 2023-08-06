@@ -96,7 +96,6 @@ const Header: React.FC<IProps> = ({ setCards }) => {
   };
 
   const createUrlLink = async (event: any) => {
-    let ts = null;
     if (event.key === "Enter") {
       if (urlLink) {
         try {
@@ -124,9 +123,7 @@ const Header: React.FC<IProps> = ({ setCards }) => {
               } as any,
             ];
           });
-          ts.close()
         } catch (error) {
-          ts.close()
         }
       }
       setUrlLink("");
