@@ -1,0 +1,22 @@
+@import '@radix-ui/colors/purple.css';
+/* 明亮模式 */
+:root {
+  --background-color: var(--plum-1);
+  --text-color: var(--plum-11);
+  --secondary-color: var(--plum-7);
+  --border-color: var(--plum-5);
+  --highlight-color: var(--plum-3);
+  --error-color: var(--plum-12);
+  --success-color: var(--plum-6);
+}
+
+/* 黑暗模式 */
+body.dark-mode {
+  --background-color: var(--plum-12);
+  --text-color: var(--plum-2);
+  --secondary-color: var(--plum-8);
+  --border-color: var(--plum-10);
+  --highlight-color: var(--plum-9);
+  --error-color: var(--plum-1);
+  --success-color: var(--plum-6);
+}

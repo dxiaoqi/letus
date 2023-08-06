@@ -1,0 +1,103 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+
+/* 整体布局样式 */
+.layout {
+  background-color: var(--mauve-1);
+  position: relative;
+}
+
+/* 网格项的基本样式 */
+.react-grid-item {
+  background-color: var(--violet-4);
+  border: 1px solid var(--mauve-6);
+  border-radius: 5px;
+  color: var(--violet-11);
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+/* 拖拽时的样式 */
+.react-grid-item.react-grid-placeholder {
+  background-color: var(--violet-7);
+  opacity: 0.8;
+}
+
+/* 拖拽时的样式 */
+.react-grid-item.react-grid-item.cssTransforms {
+  transition: none !important;
+}
+
+/* 黑暗模式 */
+body.dark-mode {
+  --background-color: var(--blackA-11);
+  --item-background-color: var(--black-A7);
+  --item-color: var(--mauve-1);
+  --border-color: var(--black-A5);
+  --placeholder-background-color: var(--black-A9);
+}
+
+.delete-button {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  display: none; /* 初始状态隐藏删除按钮 */
+  z-index: 999;
+  cursor: pointer;
+}
+
+.card:hover .delete-button {
+  display: block; /* 鼠标悬浮时显示删除按钮 */
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--violet-9);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.floating-button:focus {
+  outline: none;
+}
+
+.floating-button-icon {
+  margin-right: 5px;
+}
+.mobile-preview {
+  width: 375px; // iPhone X的宽度，可根据需要调整
+  height: 612px; // iPhone X的高度
+  border: 1px solid #e1e1e1;
+  margin: 20px auto;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  left: 40%;
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+  }
+}
+.close-preview {
+  position: absolute;
+  z-index: 999;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.App {
+  display: flex;
+}

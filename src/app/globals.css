@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@radix-ui/colors/blue.css';
+:root {
+  --background-color: var(--plum-1);
+  --text-color: var(--plum-11);
+  --secondary-color: var(--plum-7);
+  --border-color: var(--plum-5);
+  --highlight-color: var(--plum-3);
+  --error-color: var(--plum-12);
+  --success-color: var(--plum-6);
+}
+
+/* 黑暗模式 */
+body.dark-mode {
+  --background-color: var(--plum-12);
+  --text-color: var(--plum-2);
+  --secondary-color: var(--plum-8);
+  --border-color: var(--plum-10);
+  --highlight-color: var(--plum-9);
+  --error-color: var(--plum-1);
+  --success-color: var(--plum-6);
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5em; /* 40px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em; /* 32px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.75em; /* 28px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+.editable:focus {
+  outline: none;
+}
+[contenteditable] {
+  outline: none; 
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #ddd;
+}

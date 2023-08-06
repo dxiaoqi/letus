@@ -1,0 +1,22 @@
+.featureSection {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 400px;
+  .featureTitle {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .featureButton {
+    transition: background 0.3s ease;
+    &:hover {
+      background: darken(#0070f3, 10%);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
