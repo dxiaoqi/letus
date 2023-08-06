@@ -14,7 +14,6 @@ import {
 import * as Avatar from "@radix-ui/react-avatar";
 import { useTheme } from "@/app/provider";
 import { CardProps } from "@/props";
-import Toast from '../utils/Toast'
 import Box from "@/components/grid/Cards/Box";
 import "./index.scss";
 import "./dropdowm.scss";
@@ -102,9 +101,6 @@ const Header: React.FC<IProps> = ({ setCards }) => {
       if (urlLink) {
         try {
           const meta = await axios.get( `/api/get-page-info?url=${urlLink}`)
-          ts = (Toast as any).show({
-            content: 'Gening'
-          })
           setCards((preCards) => {
             return [
               ...preCards,
