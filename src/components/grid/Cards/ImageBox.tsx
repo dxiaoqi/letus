@@ -12,14 +12,14 @@ interface Props {
 }
 
 const ImageBox: React.FC<Props> = ({ card, isEdit, onChange }) => {
-  const divRef = useRef();
+  const divRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className={styles.cardContainer} title={card.title} style={{ height: "100%" }}>
       <img width={1000} height={1000} style={{
           maxWidth: '100%',
           height: 'auto',
-      }} alt={card.content} ref={() => divRef} src={card.content} />
+      }} alt={card.content} ref={divRef as any} src={card.content} />
     </div>
   );
 };

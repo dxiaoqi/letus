@@ -19,11 +19,11 @@ interface Props {
 }
 
 const UrlMetaBox: React.FC<Props> = ({ card, isEdit, onChange }) => {
-  const divRef = useRef();
+  const divRef = useRef<HTMLDivElement>(null);
   const { url,  title, screenshotUrl, description, faviconUrl} = card.content;
   const img = faviconUrl || screenshotUrl;
   return (
-    <div ref={() => divRef} className={styles.UrlMetaBox} title={card.title} style={{ height: "100%" }}>
+    <div ref={divRef as any} className={styles.UrlMetaBox} title={card.title} style={{ height: "100%" }}>
     {img && <img src={img} alt={title || "image"} />}
     {title && <h2>{title}</h2>}
     {description && <p>{description}</p>}

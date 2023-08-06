@@ -43,7 +43,7 @@ const Card: React.FC<Props> = ({ card, isEdit, onChange }) => {
   return (
     <div className={styles.cardContainer} title={card.title} style={{ height: "100%" }}>
       
-      <p ref={divRef} contentEditable={isEdit} onInput={handleInput}>{card.content}</p>
+      <p ref={divRef as any} contentEditable={isEdit} onInput={handleInput}>{card.content}</p>
     </div>
   );
 };

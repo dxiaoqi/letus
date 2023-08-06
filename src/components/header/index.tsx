@@ -28,8 +28,8 @@ const Header: React.FC<IProps> = ({ setCards }) => {
   const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
   const [urlsChecked, setUrlsChecked] = React.useState(false);
   const [person, setPerson] = React.useState("pedro");
-  const imgPopoverRef = React.useRef<HTMLDivElement | undefined>();
-  const linkPopoverRef = React.useRef<HTMLDivElement | undefined>();
+  const imgPopoverRef = React.useRef<HTMLDivElement | undefined>(null);
+  const linkPopoverRef = React.useRef<HTMLDivElement | undefined>(null);
   const [imgLinkOpen, setImageLinkOpne] = React.useState(false);
   const [imageLink, setImageLink] = useState("");
   const [urlLinkOpen, setUrlLinkOpne] = React.useState(false);
@@ -265,7 +265,7 @@ const Header: React.FC<IProps> = ({ setCards }) => {
             </Popover.Trigger>
             <Popover.Portal>
               <Popover.Content
-                ref={imgPopoverRef}
+                ref={imgPopoverRef as any}
                 className="PopoverContent"
                 sideOffset={2}
               >
